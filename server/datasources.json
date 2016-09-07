@@ -1,0 +1,12 @@
+{
+  "newDatasource": {
+    "host": "pellefant-02.db.elephantsql.com",
+    "port": 5432,
+    "url": "postgres://ocxqibcp:Oq416cUQrSYWc2z7-tAvmMcmYdRJA_jX@pellefant.db.elephantsql.com:5432/ocxqibcp",
+    "database": "ocxqibcp",
+    "password": "\tOq416cUQrSYWc2z7-tAvmMcmYdRJA_jX",
+    "name": "newDatasource",
+    "user": "ocxqibcp",
+    "connector": "postgresql"
+  }
+}
