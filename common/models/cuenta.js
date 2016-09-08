@@ -1,6 +1,7 @@
 module.exports = function(Cuenta) {
 	Cuenta.getCuentas = function(id1,id2, cb) {
-    Cuenta.find({where:{or:[{'usuarioPago':id1}, {'usuarioDebe':id2},{'usuarioPago':id2}, {'usuarioDebe':id1}]}}, function (err, instance) {
+    Cuenta.find({where:{or:[{and:[{'usuarioPago':id1}, {'usuarioDebe':id2}]},
+                            {and:[{'usuarioDebe':id1}, {'usuarioPago':id2}]}]}}, function (err, instance) {
        cb(null, instance);
     });
   }
