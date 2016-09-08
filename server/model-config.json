@@ -13,11 +13,13 @@
       "./mixins"
     ]
   },
-  "Usuario": {
-    "dataSource": "newDatasource",
-    "public": true
-  },
   "Cuenta": {
+    "dataSource": "newDatasource",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Usuario": {
     "dataSource": "newDatasource",
     "public": true
   }

@@ -1,7 +1,9 @@
 module.exports = function(Usuario) {
 	Usuario.getLogin = function(nickname,password, cb) {
     Usuario.findOne({where:{and:[{'nickname':nickname}, {'password':password}]}}, function (err, instance) {
-       cb(null, instance);
+        response = "Name of Usuario is " + instance;
+        console.log(instance);
+        cb(null, instance);
     });
   }
   
