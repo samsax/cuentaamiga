@@ -80,6 +80,9 @@
     },
     "comentario": {
       "type": "string"
+    },
+    "flag": {
+      "type": "number"
     }
   },
   "validations": [],
