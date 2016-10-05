@@ -106,6 +106,17 @@
         "nullable": "NO"
       },
       "_selectable": false
+    },
+    "grupoid": {
+      "type": "Number",
+      "postgresql": {
+        "columnName": "grupoid",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "NO"
+      }
     }
   },
   "validations": [],
@@ -115,6 +126,11 @@
       "model": "Grupo",
       "foreignKey": "usuarioId",
       "through": "GrupoUsuario"
+    },
+    "ultimogrupo": {
+      "type": "hasOne",
+      "model": "Grupo",
+      "foreignKey": "grupoid"
     }
   },
   "acls": [],

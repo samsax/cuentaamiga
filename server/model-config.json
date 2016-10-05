@@ -21,7 +21,9 @@
   },
   "Usuario": {
     "dataSource": "newDatasource",
-    "public": true
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   },
   "Grupo": {
     "dataSource": "newDatasource",

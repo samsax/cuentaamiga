@@ -58,6 +58,28 @@
         "nullable": "NO"
       },
       "_selectable": false
+    },
+    "nombre": {
+      "type": "string",
+       "postgresql": {
+        "columnName": "nombre",
+        "dataType": "text",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "NO"
+      }
+    },
+    "foto": {
+      "type": "string",
+       "postgresql": {
+        "columnName": "nombre",
+        "dataType": "text",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "NO"
+      }
     }
   },
   "validations": [],
