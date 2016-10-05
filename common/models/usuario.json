@@ -109,7 +109,14 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "grupos": {
+      "type": "hasMany",
+      "model": "Grupo",
+      "foreignKey": "usuarioId",
+      "through": "GrupoUsuario"
+    }
+  },
   "acls": [],
   "methods": {}
 }

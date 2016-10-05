@@ -1,0 +1,63 @@
+{
+  "name": "GrupoUsuario",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "postgresql": {
+    "schema": "public",
+    "table": "grupo_usuario"
+  },
+  "properties": {
+    "grupoId": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "grupo_id",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "NO"
+      },
+      "_selectable": false
+    },
+    "usuarioId": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "usuario_id",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "NO"
+      },
+      "_selectable": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "grupos": {
+      "type": "belongsTo",
+      "model": "Grupo",
+      "foreignKey": "grupoId"
+    },
+    "usuarios": {
+      "type": "belongsTo",
+      "model": "Usuario",
+      "foreignKey": "usuarioId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
