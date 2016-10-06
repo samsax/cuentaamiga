@@ -4,12 +4,11 @@ module.exports = function(Usuario) {
        cb(null, instance);
     })},
 
-  Usuario.updateGrupo = function(nickname,grupoid, cb) {
-    Usuario.findById(id), function (err, instance) {
-       usuario = instance;
+  Usuario.updateGrupo = function(id,grupoid, cb) {
+    Usuario.findById(id, function (err, instance) {
        instance.updateAttributes({"grupoid":grupoid})
        cb(null, instance);
-    }  
+    });
   },
   
   Usuario.remoteMethod (
@@ -20,8 +19,11 @@ module.exports = function(Usuario) {
           			 {arg: 'password', type: 'string'} 
           			 		],
           returns: {arg: 'id', type: 'string'}
-        },
-        'updateGrupo',
+        }
+      
+        )
+ Usuario.remoteMethod (
+    'updateGrupo',
         {
           http: {path: '/updateGrupo', verb: 'get'},
           accepts:[{arg: 'id', type: 'string'},
