@@ -59,21 +59,26 @@
       },
       "_selectable": false
     },
-    "nombre": {
-      "type": "string",
-       "postgresql": {
-        "columnName": "nombre",
+    "nombreGrupo": {
+      "type": "String",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "nombregrupo",
         "dataType": "text",
         "dataLength": null,
         "dataPrecision": null,
         "dataScale": null,
-        "nullable": "NO"
-      }
+        "nullable": "YES"
+      },
+      "_selectable": true
     },
     "foto": {
-      "type": "string",
+      "type": "String",
        "postgresql": {
-        "columnName": "nombre",
+        "columnName": "foto",
         "dataType": "text",
         "dataLength": null,
         "dataPrecision": null,
