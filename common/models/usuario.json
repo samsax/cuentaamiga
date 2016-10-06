@@ -130,7 +130,7 @@
     "ultimogrupo": {
       "type": "hasOne",
       "model": "Grupo",
-      "foreignKey": "grupoid"
+      "foreignKey": "id"
     }
   },
   "acls": [],

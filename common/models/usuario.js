@@ -2,8 +2,15 @@ module.exports = function(Usuario) {
 	Usuario.getLogin = function(nickname,password, cb) {
     Usuario.findOne({where:{and:[{'nickname':nickname}, {'password':password}]}}, function (err, instance) {
        cb(null, instance);
-    });
-  }
+    })},
+
+  Usuario.updateGrupo = function(nickname,grupoid, cb) {
+    Usuario.findById(id), function (err, instance) {
+       usuario = instance;
+       instance.updateAttributes({"grupoid":grupoid})
+       cb(null, instance);
+    }  
+  },
   
   Usuario.remoteMethod (
         'getLogin',
@@ -13,6 +20,13 @@ module.exports = function(Usuario) {
           			 {arg: 'password', type: 'string'} 
           			 		],
           returns: {arg: 'id', type: 'string'}
+        },
+        'updateGrupo',
+        {
+          http: {path: '/updateGrupo', verb: 'get'},
+          accepts:[{arg: 'id', type: 'string'},
+                 {arg: 'grupoid', type: 'string'}],
+          returns: {arg: 'id', type: 'string'}
         }
-    );
+        )
 };
