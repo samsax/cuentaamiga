@@ -10,6 +10,11 @@ module.exports = function(Usuario) {
        cb(null, instance);
     });
   },
+  Usuario.getWithCorreo = function(correo, cb) {
+    Usuario.find({"where":{"correo":correo}}, function (err, instance) {
+       cb(null, instance);
+    });
+  },
   
   Usuario.remoteMethod (
         'getLogin',
@@ -28,6 +33,14 @@ module.exports = function(Usuario) {
           http: {path: '/updateGrupo', verb: 'get'},
           accepts:[{arg: 'id', type: 'string'},
                  {arg: 'grupoid', type: 'string'}],
+          returns: {arg: 'id', type: 'string'}
+        }
+        )
+  Usuario.remoteMethod (
+    'getWithCorreo',
+        {
+          http: {path: '/getWithCorreo', verb: 'get'},
+          accepts: {arg: 'correo', type: 'string'},
           returns: {arg: 'id', type: 'string'}
         }
         )
