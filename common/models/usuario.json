@@ -117,6 +117,17 @@
         "dataScale": 0,
         "nullable": "NO"
       }
+    },
+    "idgenerado": {
+      "type": "string",
+       "postgresql": {
+        "columnName": "idgenerado",
+        "dataType": "text",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
     }
   },
   "validations": [],

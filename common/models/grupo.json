@@ -77,7 +77,7 @@
     },
     "foto": {
       "type": "String",
-       "postgresql": {
+      "postgresql": {
         "columnName": "foto",
         "dataType": "text",
         "dataLength": null,

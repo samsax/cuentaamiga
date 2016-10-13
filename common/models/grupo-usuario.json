@@ -43,6 +43,17 @@
         "nullable": "NO"
       },
       "_selectable": false
+    },
+    "flag": {
+      "type": "number",
+      "postgresql": {
+        "columnName": "flag",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
     }
   },
   "validations": [],
